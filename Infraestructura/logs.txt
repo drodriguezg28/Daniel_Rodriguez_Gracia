@@ -1,0 +1,15 @@
+2️⃣ Sobre --log-level 4
+
+En Linux, los logs tienen niveles de severidad, definidos por syslog. Cada nivel tiene un número y un significado:
+
+Nivel	Nombre	Significado
+0	emerg	Emergencia, el sistema no funciona
+1	alert	Acción inmediata necesaria
+2	crit	Error crítico
+3	err	Error
+4	warning	Advertencia
+5	notice	Notificación
+6	info	Información general
+7	debug	Mensajes de depuración
+
+Entonces, --log-level 4 significa que los mensajes se registrarán como warning (advertencia). Esto no detiene nada, solo marca que algo podría requerir atención.

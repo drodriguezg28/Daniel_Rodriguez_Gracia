@@ -1,0 +1,121 @@
+Jugador,Agente,Fecha_Inicio,Fecha_Fin,Porcentaje_Comision,Clausulas
+1,1,2023-04-01,2025-10-30,4.0,Cláusula de rescisión por lesión grave
+2,5,2022-02-01,2024-08-30,7.5,Derecho de tanteo en próxima transferencia
+3,2,2024-06-01,2028-06-30,10.0,Sin cláusula especial
+4,3,2022-04-01,2026-10-30,10.0,Cláusula de rescisión por lesión grave
+5,2,2023-04-01,2027-07-30,4.0,Sin cláusula especial
+6,1,2024-02-01,2028-08-30,3.0,Derecho de tanteo en próxima transferencia
+7,1,2024-01-01,2027-08-30,7.5,Renovación automática si supera 30 partidos
+8,5,2023-05-01,2025-09-30,4.0,Bonificación por clasificación a Champions
+9,4,2024-01-01,2027-10-30,4.0,Derecho de tanteo en próxima transferencia
+10,1,2023-01-01,2026-07-30,4.0,Cláusula de rescisión por lesión grave
+11,1,2024-04-01,2028-07-30,10.0,Cláusula de rescisión por lesión grave
+12,1,2022-01-01,2024-07-30,7.5,Sin cláusula especial
+13,5,2022-04-01,2026-06-30,4.0,Bonificación por clasificación a Champions
+14,5,2024-01-01,2027-08-30,4.0,Derecho de tanteo en próxima transferencia
+15,1,2023-02-01,2025-11-30,4.0,Sin cláusula especial
+16,2,2023-05-01,2026-12-30,4.0,Bonificación por clasificación a Champions
+17,2,2024-04-01,2026-07-30,10.0,Cláusula de rescisión por lesión grave
+18,3,2024-04-01,2026-06-30,3.0,Cláusula de rescisión por lesión grave
+19,1,2023-02-01,2025-09-30,4.0,Cláusula de rescisión por lesión grave
+20,1,2024-03-01,2027-12-30,4.0,Bonificación por clasificación a Champions
+21,1,2022-03-01,2024-11-30,3.0,Derecho de tanteo en próxima transferencia
+22,1,2023-01-01,2027-12-30,3.0,Bonificación por clasificación a Champions
+23,3,2022-04-01,2025-08-30,7.5,Sin cláusula especial
+24,2,2023-03-01,2027-06-30,4.0,Renovación automática si supera 30 partidos
+25,3,2023-06-01,2026-12-30,7.5,Cláusula de rescisión por lesión grave
+26,5,2023-06-01,2025-11-30,5.0,Renovación automática si supera 30 partidos
+27,2,2024-06-01,2027-07-30,4.0,Sin cláusula especial
+28,1,2023-04-01,2025-09-30,7.5,Bonificación por clasificación a Champions
+29,1,2022-05-01,2025-11-30,5.0,Sin cláusula especial
+30,1,2024-02-01,2027-09-30,5.0,Sin cláusula especial
+31,2,2024-05-01,2026-08-30,7.5,Derecho de tanteo en próxima transferencia
+32,2,2024-06-01,2028-09-30,4.0,Sin cláusula especial
+33,3,2023-02-01,2026-06-30,5.0,Bonificación por clasificación a Champions
+34,4,2022-06-01,2026-07-30,5.0,Sin cláusula especial
+35,1,2024-06-01,2026-09-30,5.0,Sin cláusula especial
+36,3,2022-01-01,2026-10-30,4.0,Renovación automática si supera 30 partidos
+37,1,2024-03-01,2028-11-30,4.0,Derecho de tanteo en próxima transferencia
+38,2,2023-02-01,2026-11-30,7.5,Sin cláusula especial
+39,3,2024-05-01,2028-10-30,10.0,Bonificación por clasificación a Champions
+40,2,2022-06-01,2024-06-30,5.0,Renovación automática si supera 30 partidos
+41,5,2024-01-01,2026-09-30,5.0,Bonificación por clasificación a Champions
+42,4,2024-06-01,2028-10-30,10.0,Bonificación por clasificación a Champions
+43,5,2022-01-01,2025-09-30,4.0,Bonificación por clasificación a Champions
+44,2,2023-03-01,2025-07-30,7.5,Sin cláusula especial
+45,4,2023-05-01,2027-07-30,5.0,Bonificación por clasificación a Champions
+46,3,2022-03-01,2025-10-30,7.5,Cláusula de rescisión por lesión grave
+47,5,2023-05-01,2027-09-30,4.0,Renovación automática si supera 30 partidos
+48,1,2024-02-01,2027-10-30,3.0,Renovación automática si supera 30 partidos
+49,2,2023-04-01,2025-08-30,3.0,Derecho de tanteo en próxima transferencia
+50,4,2024-05-01,2027-11-30,3.0,Derecho de tanteo en próxima transferencia
+51,3,2023-04-01,2026-07-30,4.0,Derecho de tanteo en próxima transferencia
+52,2,2022-04-01,2024-06-30,5.0,Derecho de tanteo en próxima transferencia
+53,5,2022-05-01,2025-07-30,7.5,Renovación automática si supera 30 partidos
+54,4,2024-04-01,2026-12-30,4.0,Renovación automática si supera 30 partidos
+55,4,2023-02-01,2026-08-30,5.0,Renovación automática si supera 30 partidos
+56,4,2024-02-01,2028-07-30,5.0,Derecho de tanteo en próxima transferencia
+57,2,2022-06-01,2026-06-30,4.0,Cláusula de rescisión por lesión grave
+58,5,2022-05-01,2024-06-30,10.0,Sin cláusula especial
+59,5,2022-03-01,2026-07-30,10.0,Derecho de tanteo en próxima transferencia
+60,5,2024-02-01,2027-12-30,3.0,Bonificación por clasificación a Champions
+61,2,2024-04-01,2026-08-30,4.0,Renovación automática si supera 30 partidos
+62,3,2022-04-01,2026-10-30,3.0,Cláusula de rescisión por lesión grave
+63,3,2023-06-01,2025-12-30,4.0,Derecho de tanteo en próxima transferencia
+64,4,2023-06-01,2027-12-30,3.0,Cláusula de rescisión por lesión grave
+65,3,2022-04-01,2025-08-30,5.0,Derecho de tanteo en próxima transferencia
+66,1,2022-05-01,2025-06-30,5.0,Cláusula de rescisión por lesión grave
+67,1,2022-01-01,2025-12-30,10.0,Bonificación por clasificación a Champions
+68,1,2023-01-01,2026-09-30,3.0,Renovación automática si supera 30 partidos
+69,1,2023-02-01,2027-11-30,5.0,Bonificación por clasificación a Champions
+70,1,2024-03-01,2026-09-30,5.0,Derecho de tanteo en próxima transferencia
+71,3,2022-05-01,2024-11-30,3.0,Bonificación por clasificación a Champions
+72,3,2024-04-01,2027-10-30,4.0,Cláusula de rescisión por lesión grave
+73,3,2024-04-01,2026-07-30,4.0,Bonificación por clasificación a Champions
+74,3,2022-05-01,2024-09-30,3.0,Derecho de tanteo en próxima transferencia
+75,2,2022-02-01,2024-07-30,5.0,Renovación automática si supera 30 partidos
+76,5,2023-02-01,2027-12-30,7.5,Cláusula de rescisión por lesión grave
+77,4,2022-06-01,2024-10-30,7.5,Sin cláusula especial
+78,5,2022-02-01,2026-07-30,5.0,Sin cláusula especial
+79,4,2022-04-01,2026-06-30,5.0,Derecho de tanteo en próxima transferencia
+80,2,2022-02-01,2026-10-30,7.5,Cláusula de rescisión por lesión grave
+81,2,2024-01-01,2027-10-30,4.0,Cláusula de rescisión por lesión grave
+82,1,2022-04-01,2026-07-30,4.0,Bonificación por clasificación a Champions
+83,1,2022-06-01,2026-11-30,10.0,Derecho de tanteo en próxima transferencia
+84,1,2022-02-01,2024-10-30,4.0,Sin cláusula especial
+85,4,2023-05-01,2027-06-30,4.0,Bonificación por clasificación a Champions
+86,3,2023-05-01,2026-09-30,4.0,Renovación automática si supera 30 partidos
+87,3,2024-01-01,2026-09-30,3.0,Bonificación por clasificación a Champions
+88,5,2022-01-01,2026-08-30,4.0,Bonificación por clasificación a Champions
+89,4,2024-03-01,2026-10-30,10.0,Bonificación por clasificación a Champions
+90,2,2022-06-01,2025-06-30,4.0,Bonificación por clasificación a Champions
+91,3,2023-02-01,2027-08-30,10.0,Bonificación por clasificación a Champions
+92,5,2022-04-01,2024-06-30,5.0,Cláusula de rescisión por lesión grave
+93,3,2022-05-01,2024-12-30,7.5,Renovación automática si supera 30 partidos
+94,4,2023-03-01,2026-07-30,10.0,Cláusula de rescisión por lesión grave
+95,5,2022-01-01,2024-07-30,4.0,Cláusula de rescisión por lesión grave
+96,5,2023-05-01,2026-12-30,3.0,Renovación automática si supera 30 partidos
+97,4,2023-01-01,2027-09-30,3.0,Bonificación por clasificación a Champions
+98,4,2023-04-01,2027-09-30,10.0,Bonificación por clasificación a Champions
+99,5,2023-06-01,2026-12-30,3.0,Bonificación por clasificación a Champions
+100,2,2024-02-01,2026-06-30,4.0,Bonificación por clasificación a Champions
+101,2,2023-05-01,2025-08-30,5.0,Derecho de tanteo en próxima transferencia
+102,4,2024-02-01,2026-09-30,7.5,Derecho de tanteo en próxima transferencia
+103,2,2022-05-01,2026-08-30,3.0,Sin cláusula especial
+104,3,2022-06-01,2024-08-30,7.5,Sin cláusula especial
+105,4,2023-03-01,2027-07-30,10.0,Derecho de tanteo en próxima transferencia
+106,1,2022-03-01,2025-12-30,4.0,Renovación automática si supera 30 partidos
+107,5,2024-03-01,2027-11-30,7.5,Bonificación por clasificación a Champions
+108,5,2024-01-01,2028-06-30,3.0,Derecho de tanteo en próxima transferencia
+109,1,2022-06-01,2024-12-30,7.5,Cláusula de rescisión por lesión grave
+110,1,2023-06-01,2027-10-30,10.0,Renovación automática si supera 30 partidos
+111,3,2022-01-01,2025-07-30,4.0,Renovación automática si supera 30 partidos
+112,3,2022-04-01,2025-07-30,4.0,Bonificación por clasificación a Champions
+113,1,2022-06-01,2025-06-30,5.0,Cláusula de rescisión por lesión grave
+114,3,2023-04-01,2027-06-30,3.0,Bonificación por clasificación a Champions
+115,2,2024-03-01,2027-12-30,4.0,Bonificación por clasificación a Champions
+116,1,2024-01-01,2026-11-30,10.0,Renovación automática si supera 30 partidos
+117,3,2023-04-01,2026-07-30,5.0,Derecho de tanteo en próxima transferencia
+118,3,2023-02-01,2027-08-30,7.5,Bonificación por clasificación a Champions
+119,2,2024-03-01,2028-07-30,7.5,Bonificación por clasificación a Champions
+120,2,2022-02-01,2025-10-30,4.0,Derecho de tanteo en próxima transferencia
