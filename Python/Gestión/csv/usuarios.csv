@@ -1,0 +1,24 @@
+id,nombre,usuario,contraseña,rol
+1,Carlos Director,carlosd,1234,director
+2,Ana Ojeadora,anao,1234,ojeador
+3,Luis Agente,luisa,1234,agente
+4,Pedro Jugador,pedroj,1234,jugador
+5,Roberto Carlos,robertoc,1234,ojeador
+6,Jorge Mendes,jorgem,1234,agente
+7,Mino Raiola,minor,1234,agente
+8,Jonathan Barnett,jonathanb,1234,agente
+9,Pini Zahavi,piniz,1234,agente
+10,Volker Struth,volkers,1234,agente
+11,Arsene Wenger,arsenew,1234,ojeador
+12,Monchi,monchi,1234,ojeador
+13,Ralf Rangnick,ralfr,1234,ojeador
+14,Juni Calafat,junic,1234,ojeador
+15,María Gómez,mariag,1234,jugador
+16,Juan Pérez,juanp,1234,jugador
+17,Lucas Silva,lucass,1234,jugador
+18,Sofia Rossi,sofiar,1234,jugador
+19,Diego Godín,diegog,1234,jugador
+20,Kevin De Bruyne,kevind,1234,jugador
+21,Erling Haaland,erlingh,1234,jugador
+22,Kylian Mbappé,kylianm,1234,jugador
+23,N'Golo Kanté,ngolok,1234,jugador
