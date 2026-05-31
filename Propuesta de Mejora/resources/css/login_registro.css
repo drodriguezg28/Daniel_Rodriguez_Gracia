@@ -1,0 +1,16 @@
+body {
+    background-color: #111827 !important;
+}
+
+
+.admin-login-wrapper {
+    --bs-primary: #1b64f2;
+    --bs-primary-rgb: 27, 100, 242;
+    --bs-link-color: #1b64f2;
+    --bs-link-hover-color: #ffffff;
+}
+
+.admin-login-wrapper .card {
+    background-color: #1c2434 !important;
+    border: 1px solid #313d4f !important;
+}

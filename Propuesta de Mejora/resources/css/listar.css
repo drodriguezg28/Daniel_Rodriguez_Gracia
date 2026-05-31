@@ -1,0 +1,16 @@
+.btn-custom-primary {
+    background-color: #fff !important;
+    border-color: #0d6efd !important;
+    color: #000000 !important;
+}
+
+.btn-custom-primary:hover {
+    background-color: #0b5ed7 !important;
+    border-color: #0a58ca !important;
+    color: #fff !important;
+}
+
+.container i {
+    font-size: 0.9rem !important;
+
+}
