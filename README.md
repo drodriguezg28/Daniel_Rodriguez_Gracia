@@ -1,4 +1,4 @@
-# Proyecto Intermodular
+<img width="313" height="839" alt="imagen" src="https://github.com/user-attachments/assets/1a8f1ceb-727a-4fcd-9b7f-5e1a43e5ea8a" /># Proyecto Intermodular
 
 ## La estructura para este repositorio es la siguiente:
 
@@ -35,6 +35,19 @@
 │   └── Logs/
 │       ├── script_modif.sh
 │       └── Script.py
+├── Propuesta de mejora
+│    ├── app/
+│        ├── Controllers/ (Encargados de recibir las peticiones del usuario y devolver una respuesta)
+│        ├── Livewire/
+│        ├── Models/ (Corresponden a cada una de laas tablas de la Base de Datos)
+│        └── Providers(Las clases que se ejecutan al arrancar la aplicación)
+│    ├── config/ (Archivos de configuración)
+│    ├── resources/
+│        ├── css/ (estilos)
+│        ├── js/
+│        ├── sass/
+│        └── views/ (Las vistas correspondientes a cada apartado)
+│    └── routes/ (Las rutas que conectan los controladores con las vistas)
 └── DocumentaciónDanielRodriguezGracia.pdf
 ```
 Aquí están adjuntados:
@@ -43,3 +56,4 @@ Aquí están adjuntados:
 - Archivos de asignación de reglas IPTables para cada máquina
 - Aplicación Python para la gestión de credenciales y datos
 - Aplicación para la gestión de Logs
+- Archivos de la Propuesta de Mejora
