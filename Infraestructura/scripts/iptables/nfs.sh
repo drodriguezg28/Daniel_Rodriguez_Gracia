@@ -16,7 +16,7 @@ iptables -P OUTPUT ACCEPT
 iptables -A INPUT -i lo -j ACCEPT
 echo "Loopback permitido."
 
-#Permite SSH solo desde el router.
+#Permite SSH solo desde el los servidores web.
 iptables -A INPUT -p tcp -s 192.168.20.0/24 --dport 22 -j ACCEPT
 echo "SSH permitido desde la red LANinterna"
 
@@ -25,7 +25,7 @@ iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 echo "Paquetes de respuesta permitidos."
 
-# Permitir conexión NFS desde el servidor NFS
+# Permitir conexión NFS desde el servidor web 
 iptables -A INPUT -p tcp -s 192.168.20.0/24 --dport 2049 -j ACCEPT
 echo "Conexiones NFS permitidas desde el servidor NFS."
 
@@ -35,8 +35,8 @@ echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 sysctl -p
 
 # Guardar configuración perisitentemente
-# apt install iptables-persistent -y
-# sleep 5
-# netfilter-persistent save
-# echo "Configuración de redireccionamiento de puertos completada."
-# sleep 2
+DEBIAN_FRONTEND=noninteractive apt install iptables-persistent -y
+sleep 2
+netfilter-persistent save
+echo "Configuración de redireccionamiento de puertos completada."
+sleep 2

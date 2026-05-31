@@ -1,0 +1,26 @@
+name,email,password,tipo_usuario
+Administrador,admin@elitescout.ddns.net,$2y$12$F7WiTkezXGzh2gHn4yafo.hSvybGnIGGM83QBKwY9yi2CXzkX56Tq,admin
+Real Madrid CF,info@realmadrid.com,$2y$12$IGyCTEY5reFmQym1vz/Hi.YzORc5NQzikCRzOy0l3UXJ6FLDMMXWm,club
+FC Barcelona,admin@fcbarcelona.cat,$2y$12$IGyCTEY5reFmQym1vz/Hi.YzORc5NQzikCRzOy0l3UXJ6FLDMMXWm,club
+Atletico de Madrid,admin@atleticodemadrid.com,$2y$12$IGyCTEY5reFmQym1vz/Hi.YzORc5NQzikCRzOy0l3UXJ6FLDMMXWm,club
+Athletic Club ,admin@athletic-club.eus,$2y$12$IGyCTEY5reFmQym1vz/Hi.YzORc5NQzikCRzOy0l3UXJ6FLDMMXWm,club
+Real Sociedad,info@realsociedad.eus,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,club
+Real Betis Balompié,info@realbetisbalompie.es,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,club
+Jorge Mendes,jorge.mendes@gestifute.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,agente
+Jonathan Barnett,jonathan.barnett@icm-stellar.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,agente
+Mino Raiola,mino.raiola@raiola-legacy.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,agente
+Pini Zahavi,pini.zahavi@gol-international.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,agente
+Familia Jugador,family@player-rep.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,agente
+Volker Struth,volker.struth@sports360.de,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,agente
+Piet de,piet.devisser@scouting.org,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,ojeador
+Sven Mislintat,sven.mislintat@diamond-eye.de,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,ojeador
+Ramón Rodríguez,monchi@leondesanfernando.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,ojeador
+Juni Calafat,juni.calafat@realmadrid.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,ojeador
+Luis Campos,luis.campos@football-advisor.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,ojeador
+Geoffrey Moncada,geoffrey.moncada@acmilan.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,ojeador
+Cole Palmer,cole.palmer@jugador.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,jugador
+Nicolas Williams,nicolas.williams@jugador.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,jugador
+Daniel Olmo,daniel.olmo@jugador.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,jugador
+Raphael Dias,raphael.dias@jugador.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,jugador
+Jules Koundé,jules.kounde@jugador.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,jugador
+Alejandro Balde,alejandro.balde@jugador.com,$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi,jugador

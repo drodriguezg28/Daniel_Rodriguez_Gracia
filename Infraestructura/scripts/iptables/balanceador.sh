@@ -9,11 +9,6 @@ iptables -F
 iptables -t nat -F
 echo "Reglas previas de iptables borradas."
 
-#Borrar reglas previas de iptables
-iptables -F
-iptables -t nat -F
-echo "Reglas previas de iptables borradas."
-
 #Politicas por defecto (Solo aceptar lo que salga (OUTPUT)).
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
@@ -32,9 +27,9 @@ iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 echo "Paquetes de respuesta permitidos."
 
-# Permitir HTTP y HTTPS desde el router
-iptables -A INPUT -p tcp -s 192.168.20.5 --dport 80  -j ACCEPT
-iptables -A INPUT -p tcp -s 192.168.20.5 --dport 443 -j ACCEPT
+# Permitir HTTP y HTTPS desde el router (192.168.11.5 en red2)
+iptables -A INPUT -p tcp -s 192.168.11.5 --dport 80  -j ACCEPT
+iptables -A INPUT -p tcp -s 192.168.11.5 --dport 443 -j ACCEPT
 echo "Conexiones HTTP y HTTPS permitidas desde el router."
 
 # Aceptar el redireccionamiento de puertos
@@ -43,11 +38,11 @@ echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 sysctl -p
 
 # Guardar configuración perisitentemente
-# apt install iptables-persistent -y
-# sleep 5
-# netfilter-persistent save
-# echo "Configuración de redireccionamiento de puertos completada."
-# sleep 2
+DEBIAN_FRONTEND=noninteractive apt install iptables-persistent -y
+sleep 2
+netfilter-persistent save
+echo "Configuración de redireccionamiento de puertos completada."
+sleep 2
 
 
 

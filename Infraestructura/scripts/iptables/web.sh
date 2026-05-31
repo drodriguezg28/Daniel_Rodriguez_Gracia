@@ -27,8 +27,16 @@ iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 echo "Paquetes de respuesta permitidos."
 
+# Permitir HTTP desde el balanceador
+iptables -A INPUT -p tcp -s 192.168.20.5 --dport 80 -j ACCEPT
+echo "Conexiones HTTP permitidas desde el balanceador."
+
+# Permitir HTTPS desde el balanceador
+iptables -A INPUT -p tcp -s 192.168.20.5 --dport 443 -j ACCEPT
+echo "Conexiones HTTPS permitidas desde el balanceador."
+
 # Permitir NFS desde el servidor NFS
-iptables -A INPUT -p tcp -s 192.168.30.20 --dport 2049 -j ACCEPT
+iptables -A INPUT -p tcp -s 192.168.20.12 --dport 2049 -j ACCEPT
 echo "Conexiones NFS permitidas desde el servidor NFS."
 
 # Aceptar el redireccionamiento de puertos
@@ -36,9 +44,9 @@ sed -i '/net.ipv4.ip_forward/d' /etc/sysctl.conf
 echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 sysctl -p
 
-#Guardar configuración perisitentemente
-# apt install iptables-persistent -y
-# sleep 5
-# netfilter-persistent save
-# echo "Configuración de redireccionamiento de puertos completada."
-# sleep 2
+# Guardar configuración perisitentemente
+DEBIAN_FRONTEND=noninteractive apt install iptables-persistent -y
+sleep 2
+netfilter-persistent save
+echo "Configuración de redireccionamiento de puertos completada."
+sleep 2

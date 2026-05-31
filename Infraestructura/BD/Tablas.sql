@@ -1,232 +1,261 @@
-CREATE TABLE paises (
-    ID_Pais    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Pais       VARCHAR(30),
-    Continente VARCHAR(30)
+create database if not exists elitescouting;
+use elitescouting;
+
+
+create table informes_scouting (
+	ID_Informe int not null auto_increment primary key,
+    Jugador int, -- FK
+    Ojeador int, -- FK
+    Partido_Cubierto int, -- FK
+    Fecha_Informe date,
+    Valoraciones Varchar(2000),
+    Potencial VARCHAR(20) CHECK(Potencial IN ('Bajo','Medio','Alto','Élite','Generacional','Estable','En Declive','Últimos Años')),
+	Recomendacion VARCHAR(20) CHECK(Recomendacion IN ('Demasiado Pronto','Nada Recomendable','Recomendable','Muy Recomendable'))
 );
 
-CREATE TABLE email (
-    ID_Email INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Email    VARCHAR(50) CHECK (Email REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$')
+create table ojeadores (
+ID_Ojeador int not null auto_increment primary key,
+Nombre varchar(30),
+Apellido1 varchar(30),
+Apellido2 varchar(30),
+Apodo varchar(50),
+Email int, -- FK
+Telefono int, -- FK
+Nacionalidad int, -- FK
+Usuario bigint -- FK
 );
 
-CREATE TABLE telefono (
-    ID_Telefono INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Telefono    VARCHAR(50) CHECK (Telefono REGEXP '^\\+[1-9][0-9]{7,14}$')
+
+
+create table ojeadores_partidos (
+ID_Ojeador int not null, -- FK
+ID_Partido_Cubierto int not null, -- FK
+PRIMARY KEY (ID_Ojeador, ID_Partido_Cubierto)
 );
 
-CREATE TABLE temporada (
-    ID_Temporada     INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre_Temporada VARCHAR(7) CHECK (
-        LENGTH(Nombre_Temporada) = 7
-        AND Nombre_Temporada REGEXP '^[0-9]{4}/[0-9]{2}$'
-    )
+
+create table partidos_cubiertos (
+ID_Partido_Cubierto int not null auto_increment primary key,
+Equipo_Local int, -- FK
+Equipo_Visitante int, -- FK
+Goles_Local int,
+Goles_Visitante int,
+Ganador varchar(9) check (Ganador IN ("Local","Empate" , "Visitante")),
+Fecha DATE DEFAULT (CURRENT_DATE),
+Pais int, -- FK
+Localidad varchar(30)
 );
 
-CREATE TABLE agentes (
-    ID_Agente    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre       VARCHAR(30),
-    Apellido1    VARCHAR(30),
-    Apellido2    VARCHAR(30),
-    Email        INT,
-    Telefono     INT,
-    Nacionalidad INT
+
+create table partidos_jugadores(
+ID_Partido_Cubierto int not null, -- FK
+ID_Jugador int not null, -- FK
+PRIMARY KEY (ID_Jugador, ID_Partido_Cubierto)
 );
 
-CREATE TABLE clubes (
-    ID_Club  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre   VARCHAR(30),
-    Telefono INT,
-    Email    INT,
-    url_logo VARCHAR(255)
+
+create table paises (
+ID_Pais int not null auto_increment primary key,
+Pais varchar(40), -- poner 40
+Continente varchar(30),
+Bandera varchar(255)
 );
 
-CREATE TABLE ojeadores (
-    ID_Ojeador INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre     VARCHAR(30),
-    Apellido1  VARCHAR(30),
-    Apellido2  VARCHAR(30),
-    Apodo      VARCHAR(50),
-    Email      INT,
-    Telefono   INT
+
+create table jugadores (
+ID_Jugador int not null auto_increment primary key,
+Nombre varchar(30),
+Apellido1 varchar(30),
+Apellido2 varchar(30),
+Apodo varchar(30),
+Fecha_Nacimiento date,
+Nacionalidad int, -- FK
+Altura decimal(3,2),
+Peso decimal(5,2),
+Posicion_Principal ENUM (
+        'Portero', 'Defensa Central', 'Lateral Derecho', 'Lateral Izquierdo', 'Carrilero', 'Pivote', 'Mediocentro', 'Mediapunta', 
+        'Interior Derecho', 'Interior Izquierdo', 'Extremo Derecho', 'Extremo Izquierdo', 'Segundo Delantero', 'Delantero Centro'),
+Posicion_Secundaria ENUM(
+        'Ninguna', 'Portero', 'Defensa Central', 'Lateral Derecho', 'Lateral Izquierdo', 'Carrilero', 'Pivote', 'Mediocentro', 'Mediapunta', 
+        'Interior Derecho', 'Interior Izquierdo', 'Extremo Derecho', 'Extremo Izquierdo', 'Segundo Delantero', 'Delantero Centro'),
+Dorsal_actual int,
+Club_Actual int, -- FK
+Valor_Mercado decimal(12,2), -- FORMAT(Valor_Mercado, 'N2', 'es-ES')
+Agente int, -- FK,
+Usuario bigint, -- FK
+Foto_Perfil varchar(255)
 );
 
-CREATE TABLE competicion (
-    ID_Competicion INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre         VARCHAR(50),
-    Pais           INT,
-    Tipo           VARCHAR(50) CHECK (Tipo IN (
-        'Liga','Copa Nacional','Copa de la Liga','Supercopa',
-        'Copa Continental','Copa Intercontinental','Torneo Amistoso'
-    ))
+
+create table contrataciones(
+ID_Contratacion int not null auto_increment primary key,
+Jugador int, -- FK
+Club int, -- FK
+Fecha_Inicio_Contrato date,
+Fecha_Fin_Contrato date,
+Sueldo decimal(10,2), -- FORMAT(Valor_Mercado, 'N2', 'es-ES')
+Porcentaje_Comision DECIMAL(5,2) CHECK (Porcentaje_Comision <= 10.00), -- Crear Trigger para calcular comision sobre el coste/Sueldo  -- FORMAT(Valor_Mercado, 'N2', 'es-ES')
+Duracion_restante INT AS (DATEDIFF(Fecha_Fin_Contrato, Fecha_Inicio_Contrato)) VIRTUAL, -- (fecha fin - fecha inicio) -- se puede hacer con trigger
+Tipo_Contrato VARCHAR(10) check (Tipo_Contrato IN ("Cesión","Renovación","Compra", "Libre")),
+Rol_Equipo VARCHAR(12) check(Rol_Equipo IN ("Titular","Suplente","Cantera")),
+Fecha_Rescision_Cancelacion date
 );
 
-CREATE TABLE jugadores (
-    ID_Jugador          INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre              VARCHAR(30),
-    Apellido1           VARCHAR(30),
-    Apellido2           VARCHAR(30),
-    Apodo               VARCHAR(30),
-    Fecha_Nacimiento    DATE,
-    Nacionalidad        INT,
-    Altura              DECIMAL(3,2),
-    Peso                DECIMAL(5,2),
-    Posicion_Principal  ENUM(
-        'Portero','Defensa Central','Lateral Derecho','Lateral Izquierdo',
-        'Carrilero','Pivote','Mediocentro','Mediapunta',
-        'Interior Derecho','Interior Izquierdo','Extremo Derecho','Extremo Izquierdo',
-        'Segundo Delantero','Delantero Centro'
-    ),
-    Posicion_Secundaria ENUM(
-        'Portero','Defensa Central','Lateral Derecho','Lateral Izquierdo',
-        'Carrilero','Pivote','Mediocentro','Mediapunta',
-        'Interior Derecho','Interior Izquierdo','Extremo Derecho','Extremo Izquierdo',
-        'Segundo Delantero','Delantero Centro'
-    ),
-    Dorsal_actual INT,
-    Club_Actual   INT,
-    Valor_Mercado DECIMAL(12,2),
-    Agente        INT,
-    Foto_Perfil   VARCHAR(255)
+
+create table transferencias(
+ID_Transferencia int not null auto_increment primary key,
+Jugador int, -- FK
+Club_Origen int, -- FK
+Club_Destino int, -- FK
+Fecha_Transferencia date,
+Valor_Operacion decimal(12,2), -- FORMAT(Valor_Mercado, 'N2', 'es-ES')
+Comision_Agente decimal (10,2), -- Crear Trigger para calcular comision sobre el coste/Sueldo  -- FORMAT(Valor_Mercado, 'N2', 'es-ES') -- FK
+Agente int -- FK
 );
 
-CREATE TABLE competi_clubes (
-    ID_Club        INT NOT NULL,
-    ID_Competicion INT NOT NULL,
-    PRIMARY KEY (ID_Club, ID_Competicion)
-);
 
-CREATE TABLE partidos_cubiertos (
-    ID_Partido_Cubierto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Equipo_Local        INT,
-    Equipo_Visitante    INT,
-    Goles_Local         INT,
-    Goles_Visitante     INT,
-    Ganador             VARCHAR(9) CHECK (Ganador IN ('Local','Empate','Visitante')),
-    Fecha               DATE DEFAULT (CURRENT_DATE),
-    Pais                INT,
-    Localidad           VARCHAR(30)
-);
+-- Trigger
+DELIMITER //
 
-CREATE TABLE contrataciones (
-    ID_Contratacion             INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Jugador                     INT,
-    Club                        INT,
-    Fecha_Inicio_Contrato       DATE,
-    Fecha_Fin_Contrato          DATE,
-    Sueldo                      DECIMAL(10,2),
-    Porcentaje_Comision         DECIMAL(5,2) DEFAULT 0 CHECK (Porcentaje_Comision <= 10.00),
-    Duracion_restante           INT AS (DATEDIFF(Fecha_Fin_Contrato, Fecha_Inicio_Contrato)) VIRTUAL,
-    Tipo_Contrato               VARCHAR(10) CHECK (Tipo_Contrato IN ('Cesion','Renovacion','Compra','Libre')),
-    Rol_Equipo                  VARCHAR(12) CHECK (Rol_Equipo IN ('Titular','Suplente','Cantera')),
-    Fecha_Rescision_Cancelacion DATE
-);
-
-CREATE TABLE transferencias (
-    ID_Transferencia    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Jugador             INT,
-    Club_Origen         INT,
-    Club_Destino        INT,
-    Fecha_Transferencia DATE,
-    Valor_Operacion     DECIMAL(12,2),
-    Comision_Agente     DECIMAL(10,2),
-    Agente              INT
-);
-
-CREATE OR REPLACE TRIGGER calcular_comision
+CREATE TRIGGER calcular_comision
 BEFORE INSERT ON transferencias
 FOR EACH ROW
-SET NEW.Comision_Agente = IF(NEW.Comision_Agente IS NULL, NEW.Valor_Operacion * 0.10, NEW.Comision_Agente);
+BEGIN
+    IF NEW.Comision_Agente IS NULL THEN
+        SET NEW.Comision_Agente = NEW.Valor_Operacion * 0.10;
+    END IF;
+END //
 
-CREATE TABLE contratos_representacion (
-    ID_Contrato         INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Jugador             INT,
-    Agente              INT,
-    Fecha_Inicio        DATE NOT NULL,
-    Fecha_Fin           DATE,
-    Tiempo_Restante     INT GENERATED ALWAYS AS (DATEDIFF(Fecha_Fin, Fecha_Inicio)) VIRTUAL,
-    Porcentaje_Comision DECIMAL(5,2) DEFAULT 0 CHECK (Porcentaje_Comision <= 10.00),
-    Clausulas           VARCHAR(2000)
+DELIMITER ;
+
+
+create table contratos_representacion (
+ID_Contrato int not null auto_increment primary key,
+Jugador int, -- FK
+Agente int, -- FK
+Fecha_Inicio date not null,
+Fecha_Fin date,
+Tiempo_Restante int GENERATED ALWAYS AS (DATEDIFF(Fecha_Fin, Fecha_Inicio)) VIRTUAL, -- (fecha fin - fecha inicio)
+Porcentaje_Comision DECIMAL(5,2) DEFAULT 0 CHECK (Porcentaje_Comision <= 10.00),
+Clausulas varchar(2000)
 );
 
-CREATE TABLE estadisticas_jugador (
-    ID_Estadisticas    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Jugador            INT,
-    Club               INT,
-    Temporada          INT,
-    Competicion        INT,
-    Partidos_jugados   INT,
-    Goles              INT,
-    Asistencias        INT,
-    Tarjetas_amarillas INT,
-    Tarjetas_rojas     INT
+create table agentes(
+ID_Agente int not null auto_increment primary key,
+Nombre varchar(30),
+Apellido1 varchar(30),
+Apellido2 varchar(30),
+Email int, -- FK
+Telefono int, -- FK
+Nacionalidad int, -- FK
+Usuario bigint -- FK
 );
 
-CREATE TABLE temporada_jugador (
-    ID_Jugador   INT NOT NULL,
-    ID_Temporada INT NOT NULL,
-    PRIMARY KEY (ID_Jugador, ID_Temporada)
+
+create table clubes(
+ID_club int not null auto_increment primary key,
+Nombre varchar(30),
+Pais int,
+Telefono int, -- FK
+Email int, -- FK
+Usuario bigint, -- FK
+url_logo varchar(255)
 );
 
-CREATE TABLE partidos_jugadores (
-    ID_Partido_Cubierto INT NOT NULL,
-    ID_Jugador          INT NOT NULL,
-    PRIMARY KEY (ID_Jugador, ID_Partido_Cubierto)
+
+
+
+create table competi_clubes(
+ID_Club int not null, -- FK
+ID_Competicion int not null, -- FK
+PRIMARY KEY (ID_Club, ID_Competicion)
 );
 
-CREATE TABLE ojeadores_partidos (
-    ID_Ojeador          INT NOT NULL,
-    ID_Partido_Cubierto INT NOT NULL,
-    PRIMARY KEY (ID_Ojeador, ID_Partido_Cubierto)
+
+create table competicion(
+ID_Competicion int not null auto_increment primary key,
+Nombre varchar(50),
+Pais int, -- FK
+Tipo varchar(50) check (Tipo IN ("Liga","Copa Nacional","Copa de la Liga","Supercopa","Copa Continental","Copa Intercontinental","Torneo Amistoso")) -- (liga, copa, torneos continentales…)
 );
 
-CREATE TABLE informes_scouting (
-    ID_Informe       INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Jugador          INT,
-    Ojeador          INT,
-    Partido_Cubierto INT,
-    Fecha_Informe    DATE,
-    Valoraciones     VARCHAR(2000),
-    Potencial        VARCHAR(20) CHECK (Potencial IN (
-        'Bajo','Medio','Alto','Elite','Generacional',
-        'Estable','En Declive','Ultimos Anos'
-    )),
-    Recomendacion    VARCHAR(20) CHECK (Recomendacion IN (
-        'Demasiado Pronto','Nada Recomendable','Recomendable','Muy Recomendable'
-    ))
+
+create table estadisticas_jugador(
+ID_Estadisticas int not null auto_increment primary key,
+Jugador int, -- FK
+Club int, -- FK
+Temporada int, -- FK
+Competicion int, -- FK
+Partidos_jugados int,
+Goles int, 
+Asistencias int,
+Tarjetas_amarillas int,
+Tarjetas_rojas int
 );
 
-CREATE TABLE email_ojeador (
-    ID_Email   INT NOT NULL,
-    ID_Ojeador INT NOT NULL,
-    PRIMARY KEY (ID_Email, ID_Ojeador)
+
+create table temporada_jugador(
+ID_Jugador int not null, -- FK
+ID_Temporada int not null, -- FK
+PRIMARY KEY (ID_Jugador, ID_Temporada)
 );
 
-CREATE TABLE email_club (
-    ID_Email INT NOT NULL,
-    ID_Club  INT NOT NULL,
-    PRIMARY KEY (ID_Email, ID_Club)
+
+create table temporada(
+ID_Temporada  int not null auto_increment primary key,
+Nombre_Temporada varchar (7) check (length(Nombre_Temporada) = 7 and Nombre_Temporada REGEXP '^[0-9]{4}/[0-9]{2}$') -- Formato 2025/26
 );
 
-CREATE TABLE email_agente (
-    ID_Email  INT NOT NULL,
-    ID_Agente INT NOT NULL,
-    PRIMARY KEY (ID_Email, ID_Agente)
+
+create table email(
+ID_Email  int not null auto_increment primary key,
+Email varchar(50) check (Email REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$')
 );
 
-CREATE TABLE telefono_ojeador (
-    ID_Telefono INT NOT NULL,
-    ID_Ojeador  INT NOT NULL,
-    PRIMARY KEY (ID_Telefono, ID_Ojeador)
+
+create table email_ojeador(
+ID_Email int not null, -- FK
+ID_Ojeador int not null, -- FK
+PRIMARY KEY (ID_Email, ID_Ojeador)
 );
 
-CREATE TABLE telefono_club (
-    ID_Telefono INT NOT NULL,
-    ID_Club     INT NOT NULL,
-    PRIMARY KEY (ID_Telefono, ID_Club)
+
+create table email_club(
+ID_Email int not null, -- FK
+ID_Club int not null, -- FK
+PRIMARY KEY (ID_Email, ID_Club)
 );
 
-CREATE TABLE telefono_agente (
-    ID_Telefono INT NOT NULL,
-    ID_Agente   INT NOT NULL,
-    PRIMARY KEY (ID_Telefono, ID_Agente)
+
+create table email_agente(
+ID_Email int not null, -- FK
+ID_Agente int not null, -- FK
+PRIMARY KEY (ID_Email, ID_Agente)
+);
+
+
+create table telefono(
+ID_Telefono  int not null auto_increment primary key,
+Telefono varchar(50) check (Telefono REGEXP '^\\+[1-9][0-9]{7,14}$')
+);
+
+
+create table telefono_ojeador(
+ID_Telefono int not null, -- FK
+ID_Ojeador int not null, -- FK
+PRIMARY KEY (ID_Telefono, ID_Ojeador)
+);
+
+
+create table telefono_club(
+ID_Telefono int not null, -- FK
+ID_Club int not null, -- FK
+PRIMARY KEY (ID_Telefono, ID_Club)
+);
+
+
+create table telefono_agente(
+ID_Telefono int not null, -- FK
+ID_Agente int not null, -- FK
+PRIMARY KEY (ID_Telefono, ID_Agente)
 );

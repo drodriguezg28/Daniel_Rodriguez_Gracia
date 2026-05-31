@@ -13,6 +13,49 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "debian/bookworm64" # Box Debian 12
+  
+  #Servidor de BBDD
+  config.vm.define "sql" do |sql|
+    sql.vm.hostname = "sql"  # Nombre del host
+    sql.vm.network "private_network", ip:"192.168.30.5", virtualbox__intnet: "LANDatos"  # Red interna
+    sql.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_sql.sh" # Script de aprovisionamiento
+    sql.vm.provision "shell", path: "./scripts/iptables/sql.sh" # Script de aprovisionamiento
+  end
+
+  #Servidor NFS
+  config.vm.define "nfs" do |nfs|
+    nfs.vm.hostname = "nfs"  # Nombre del host
+    nfs.vm.network "private_network", ip:"192.168.20.12", virtualbox__intnet: "LANinterna"  # Red interna
+    nfs.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_nfs.sh"
+    nfs.vm.provision "shell", path: "./scripts/iptables/nfs.sh"
+  end
+  
+  #Servidor Web Backend 1
+  config.vm.define "servidorweb1" do |servidorweb1|
+    servidorweb1.vm.hostname = "servidorweb1"  # Nombre del host
+    servidorweb1.vm.network "private_network", ip:"192.168.20.10", virtualbox__intnet: "LANinterna"  # Red interna
+    servidorweb1.vm.network "private_network", ip:"192.168.30.10", virtualbox__intnet: "LANDatos"  # Red interna
+    servidorweb1.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_web.sh"
+    servidorweb1.vm.provision "shell", path: "./scripts/iptables/web.sh"
+  end
+  
+  #Servidor Web Backend 2
+  config.vm.define "servidorweb2" do |servidorweb2|
+    servidorweb2.vm.hostname = "servidorweb2"  # Nombre del host
+    servidorweb2.vm.network "private_network", ip:"192.168.20.11", virtualbox__intnet: "LANinterna"  # Red interna
+    servidorweb2.vm.network "private_network", ip:"192.168.30.11", virtualbox__intnet: "LANDatos"  # Red interna
+    servidorweb2.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_web.sh"
+    servidorweb2.vm.provision "shell", path: "./scripts/iptables/web.sh"
+  end
+  
+  #Balanceador
+  config.vm.define "balanceador" do |balanceador|
+    balanceador.vm.hostname = "balanceador"  # Nombre del host
+    balanceador.vm.network "private_network", ip:"192.168.11.10", virtualbox__intnet: "red2"  # Red interna
+    balanceador.vm.network "private_network", ip:"192.168.20.5", virtualbox__intnet: "LANinterna"  # Red interna
+    balanceador.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_balanceador.sh"
+    balanceador.vm.provision "shell", path: "./scripts/iptables/balanceador.sh"
+  end
 
   #Router
   config.vm.define "router" do |router|
@@ -38,48 +81,10 @@ Vagrant.configure("2") do |config|
   #   router.vm.provision "shell", path: "aprov_ftp.sh"
   # end
 
-  #Balanceador
-  config.vm.define "balanceador" do |balanceador|
-    balanceador.vm.hostname = "balanceador"  # Nombre del host
-    balanceador.vm.network "private_network", ip:"192.168.11.10", virtualbox__intnet: "red2"  # Red interna
-    balanceador.vm.network "private_network", ip:"192.168.20.5", virtualbox__intnet: "LANinterna"  # Red interna
-    balanceador.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_balanceador.sh"
-    balanceador.vm.provision "shell", path: "./scripts/iptables/balanceador.sh"
-  end
-
-  #Servidor Web Backend 1
-  config.vm.define "servidorweb1" do |servidorweb1|
-    servidorweb1.vm.hostname = "servidorweb1"  # Nombre del host
-    servidorweb1.vm.network "private_network", ip:"192.168.20.10", virtualbox__intnet: "LANinterna"  # Red interna
-    servidorweb1.vm.network "private_network", ip:"192.168.30.10", virtualbox__intnet: "LANDatos"  # Red interna
-    servidorweb1.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_web.sh"
-    servidorweb1.vm.provision "shell", path: "./scripts/iptables/web.sh"
-  end
   
-  #Servidor Web Backend 2
-  config.vm.define "servidorweb2" do |servidorweb2|
-    servidorweb2.vm.hostname = "servidorweb2"  # Nombre del host
-    servidorweb2.vm.network "private_network", ip:"192.168.20.11", virtualbox__intnet: "LANinterna"  # Red interna
-    servidorweb2.vm.network "private_network", ip:"192.168.30.11", virtualbox__intnet: "LANDatos"  # Red interna
-    servidorweb2.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_web.sh"
-    servidorweb2.vm.provision "shell", path: "./scripts/iptables/web.sh"
-  end
 
-  #Servidor NFS
-  config.vm.define "nfs" do |nfs|
-    nfs.vm.hostname = "nfs"  # Nombre del host
-    nfs.vm.network "private_network", ip:"192.168.30.12", virtualbox__intnet: "LANDatos"  # Red interna
-    nfs.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_nfs.sh"
-    nfs.vm.provision "shell", path: "./scripts/iptables/nfs.sh"
-  end
 
-  #Servidor de BBDD
- config.vm.define "sql" do |sql|
-    sql.vm.hostname = "sql"  # Nombre del host
-    sql.vm.network "private_network", ip:"192.168.30.5", virtualbox__intnet: "LANDatos"  # Red interna
-    sql.vm.provision "shell", path: "./scripts/aprovisionamiento/aprov_sql.sh" # Script de aprovisionamiento
-    sql.vm.provision "shell", path: "./scripts/iptables/sql.sh" # Script de aprovisionamiento
-  end
+  
 
 
 

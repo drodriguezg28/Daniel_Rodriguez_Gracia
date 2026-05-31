@@ -1,51 +1,249 @@
-Pais;Continente
-Inglaterra;Europa
-España;Europa
-Alemania;Europa
-Italia;Europa
-Francia;Europa
-Portugal;Europa
-Holanda;Europa
-Bélgica;Europa
-Brasil;América del Sur
-Argentina;América del Sur
-Uruguay;América del Sur
-Colombia;América del Sur
-Ecuador;América del Sur
-Chile;América del Sur
-Perú;América del Sur
-Estados Unidos;América del Norte
-México;América del Norte
-Canadá;América del Norte
-Marruecos;África
-Senegal;África
-Nigeria;África
-Costa de Marfil;África
-Egipto;África
-Camerún;África
-Ghana;África
-Japón;Asia
-Corea del Sur;Asia
-Arabia Saudita;Asia
-Australia;Oceanía
-Croacia;Europa
-Suiza;Europa
-Dinamarca;Europa
-Suecia;Europa
-Noruega;Europa
-Polonia;Europa
-Turquía;Europa
-Ucrania;Europa
-Serbia;Europa
-Austria;Europa
-Escocia;Europa
-Hungría;Europa
-Irlanda;Europa
-República Checa;Europa
-Gales;Europa
-Eslovaquia;Europa
-Paraguay;América del Sur
-Venezuela;América del Sur
-Argelia;África
-Túnez;África
-Sudáfrica;África
+Pais;Continente;Bandera
+Inglaterra;Europa;https://flagpedia.net/data/flags/w580/gb-eng.png
+España;Europa;https://flagpedia.net/data/flags/w580/es.png
+Alemania;Europa;https://flagpedia.net/data/flags/w580/de.png
+Italia;Europa;https://flagpedia.net/data/flags/w580/it.png
+Francia;Europa;https://flagpedia.net/data/flags/w580/fr.png
+Portugal;Europa;https://flagpedia.net/data/flags/w580/pt.png
+Países Bajos;Europa;https://flagpedia.net/data/flags/w580/nl.png
+Bélgica;Europa;https://flagpedia.net/data/flags/w580/be.png
+Brasil;América del Sur;https://flagpedia.net/data/flags/w580/br.png
+Argentina;América del Sur;https://flagpedia.net/data/flags/w580/ar.png
+Uruguay;América del Sur;https://flagpedia.net/data/flags/w580/uy.png
+Colombia;América del Sur;https://flagpedia.net/data/flags/w580/co.png
+Ecuador;América del Sur;https://flagpedia.net/data/flags/w580/ec.png
+Chile;América del Sur;https://flagpedia.net/data/flags/w580/cl.png
+Perú;América del Sur;https://flagpedia.net/data/flags/w580/pe.png
+Estados Unidos;América del Norte;https://flagpedia.net/data/flags/w580/us.png
+México;América del Norte;https://flagpedia.net/data/flags/w580/mx.png
+Canadá;América del Norte;https://flagpedia.net/data/flags/w580/ca.png
+Marruecos;África;https://flagpedia.net/data/flags/w580/ma.png
+Senegal;África;https://flagpedia.net/data/flags/w580/sn.png
+Nigeria;África;https://flagpedia.net/data/flags/w580/ng.png
+Costa de Marfil;África;https://flagpedia.net/data/flags/w580/ci.png
+Egipto;África;https://flagpedia.net/data/flags/w580/eg.png
+Camerún;África;https://flagpedia.net/data/flags/w580/cm.png
+Ghana;África;https://flagpedia.net/data/flags/w580/gh.png
+Japón;Asia;https://flagpedia.net/data/flags/w580/jp.png
+Corea del Sur;Asia;https://flagpedia.net/data/flags/w580/kr.png
+Arabia Saudita;Asia;https://flagpedia.net/data/flags/w580/sa.png
+Australia;Oceanía;https://flagpedia.net/data/flags/w580/au.png
+Croacia;Europa;https://flagpedia.net/data/flags/w580/hr.png
+Suiza;Europa;https://flagpedia.net/data/flags/w580/ch.png
+Dinamarca;Europa;https://flagpedia.net/data/flags/w580/dk.png
+Suecia;Europa;https://flagpedia.net/data/flags/w580/se.png
+Noruega;Europa;https://flagpedia.net/data/flags/w580/no.png
+Polonia;Europa;https://flagpedia.net/data/flags/w580/pl.png
+Turquía;Europa;https://flagpedia.net/data/flags/w580/tr.png
+Ucrania;Europa;https://flagpedia.net/data/flags/w580/ua.png
+Serbia;Europa;https://flagpedia.net/data/flags/w580/rs.png
+Austria;Europa;https://flagpedia.net/data/flags/w580/at.png
+Escocia;Europa;https://flagpedia.net/data/flags/w580/gb-sct.png
+Hungría;Europa;https://flagpedia.net/data/flags/w580/hu.png
+Irlanda;Europa;https://flagpedia.net/data/flags/w580/ie.png
+República Checa;Europa;https://flagpedia.net/data/flags/w580/cz.png
+Gales;Europa;https://flagpedia.net/data/flags/w580/gb-wls.png
+Eslovaquia;Europa;https://flagpedia.net/data/flags/w580/sk.png
+Paraguay;América del Sur;https://flagpedia.net/data/flags/w580/py.png
+Venezuela;América del Sur;https://flagpedia.net/data/flags/w580/ve.png
+Argelia;África;https://flagpedia.net/data/flags/w580/dz.png
+Túnez;África;https://flagpedia.net/data/flags/w580/tn.png
+Sudáfrica;África;https://flagpedia.net/data/flags/w580/za.png
+Andorra;Europa;https://flagpedia.net/data/flags/w580/ad.png
+Emiratos Árabes Unidos;Asia;https://flagpedia.net/data/flags/w580/ae.png
+Afganistán;Asia;https://flagpedia.net/data/flags/w580/af.png
+Antigua y Barbuda;América del Norte;https://flagpedia.net/data/flags/w580/ag.png
+Anguila;América del Norte;https://flagpedia.net/data/flags/w580/ai.png
+Albania;Europa;https://flagpedia.net/data/flags/w580/al.png
+Armenia;Asia;https://flagpedia.net/data/flags/w580/am.png
+Angola;África;https://flagpedia.net/data/flags/w580/ao.png
+Antártida;América del Sur;https://flagpedia.net/data/flags/w580/aq.png
+Samoa Americana;Oceanía;https://flagpedia.net/data/flags/w580/as.png
+Aruba;América del Norte;https://flagpedia.net/data/flags/w580/aw.png
+Åland;Europa;https://flagpedia.net/data/flags/w580/ax.png
+Azerbaiyán;Asia;https://flagpedia.net/data/flags/w580/az.png
+Bosnia y Herzegovina;Europa;https://flagpedia.net/data/flags/w580/ba.png
+Barbados;América del Norte;https://flagpedia.net/data/flags/w580/bb.png
+Bangladesh;Asia;https://flagpedia.net/data/flags/w580/bd.png
+Burkina Faso;África;https://flagpedia.net/data/flags/w580/bf.png
+Bulgaria;Europa;https://flagpedia.net/data/flags/w580/bg.png
+Baréin;Asia;https://flagpedia.net/data/flags/w580/bh.png
+Burundi;África;https://flagpedia.net/data/flags/w580/bi.png
+Benín;África;https://flagpedia.net/data/flags/w580/bj.png
+San Bartolomé;América del Norte;https://flagpedia.net/data/flags/w580/bl.png
+Bermudas;América del Norte;https://flagpedia.net/data/flags/w580/bm.png
+Brunéi;Asia;https://flagpedia.net/data/flags/w580/bn.png
+Bolivia;América del Sur;https://flagpedia.net/data/flags/w580/bo.png
+Caribe Neerlandés;América del Norte;https://flagpedia.net/data/flags/w580/bq.png
+Bahamas;América del Norte;https://flagpedia.net/data/flags/w580/bs.png
+Bután;Asia;https://flagpedia.net/data/flags/w580/bt.png
+Botsuana;África;https://flagpedia.net/data/flags/w580/bw.png
+Bielorrusia;Europa;https://flagpedia.net/data/flags/w580/by.png
+Belice;América del Norte;https://flagpedia.net/data/flags/w580/bz.png
+Islas Cocos;Oceanía;https://flagpedia.net/data/flags/w580/cc.png
+Républica Democrática del Congo;África;https://flagpedia.net/data/flags/w580/cd.png
+República Centroafricana;África;https://flagpedia.net/data/flags/w580/cf.png
+Congo;África;https://flagpedia.net/data/flags/w580/cg.png
+Islas Cook;Oceanía;https://flagpedia.net/data/flags/w580/ck.png
+China;Asia;https://flagpedia.net/data/flags/w580/cn.png
+Costa Rica;América del Norte;https://flagpedia.net/data/flags/w580/cr.png
+Cuba;América del Norte;https://flagpedia.net/data/flags/w580/cu.png
+Cabo Verde;África;https://flagpedia.net/data/flags/w580/cv.png
+Curazao;América del Norte;https://flagpedia.net/data/flags/w580/cw.png
+Isla de Navidad;Oceanía;https://flagpedia.net/data/flags/w580/cx.png
+Chipre;Europa;https://flagpedia.net/data/flags/w580/cy.png
+Yibuti;África;https://flagpedia.net/data/flags/w580/dj.png
+Dominica;América del Norte;https://flagpedia.net/data/flags/w580/dm.png
+República Dominicana;América del Norte;https://flagpedia.net/data/flags/w580/do.png
+Estonia;Europa;https://flagpedia.net/data/flags/w580/ee.png
+Sahara Occidental;África;https://flagpedia.net/data/flags/w580/eh.png
+Eritrea;África;https://flagpedia.net/data/flags/w580/er.png
+Etiopía;África;https://flagpedia.net/data/flags/w580/et.png
+Finlandia;Europa;https://flagpedia.net/data/flags/w580/fi.png
+Fiyi;Oceanía;https://flagpedia.net/data/flags/w580/fj.png
+Islas Malvinas;América del Sur;https://flagpedia.net/data/flags/w580/fk.png
+Micronesia;Oceanía;https://flagpedia.net/data/flags/w580/fm.png
+Islas Feroe;Europa;https://flagpedia.net/data/flags/w580/fo.png
+Gabón;África;https://flagpedia.net/data/flags/w580/ga.png
+Irlanda del Norte;Europa;https://flagpedia.net/data/flags/w580/gb-nir.png
+Granada;América del Norte;https://flagpedia.net/data/flags/w580/gd.png
+Georgia;Asia;https://flagpedia.net/data/flags/w580/ge.png
+Guayana Francesa;América del Sur;https://flagpedia.net/data/flags/w580/gf.png
+Guernsey;Europa;https://flagpedia.net/data/flags/w580/gg.png
+Gibraltar;Europa;https://flagpedia.net/data/flags/w580/gi.png
+Groenlandia;América del Norte;https://flagpedia.net/data/flags/w580/gl.png
+Gambia;África;https://flagpedia.net/data/flags/w580/gm.png
+Guinea;África;https://flagpedia.net/data/flags/w580/gn.png
+Guadalupe;América del Norte;https://flagpedia.net/data/flags/w580/gp.png
+Guinea Ecuatorial;África;https://flagpedia.net/data/flags/w580/gq.png
+Grecia;Europa;https://flagpedia.net/data/flags/w580/gr.png
+Guatemala;América del Norte;https://flagpedia.net/data/flags/w580/gt.png
+Guam;Oceanía;https://flagpedia.net/data/flags/w580/gu.png
+Guinea-Bisáu;África;https://flagpedia.net/data/flags/w580/gw.png
+Guyana;América del Sur;https://flagpedia.net/data/flags/w580/gy.png
+Hong Kong;Asia;https://flagpedia.net/data/flags/w580/hk.png
+Islas Heard y McDonald;América del Sur;https://flagpedia.net/data/flags/w580/hm.png
+Honduras;América del Norte;https://flagpedia.net/data/flags/w580/hn.png
+Haití;América del Norte;https://flagpedia.net/data/flags/w580/ht.png
+Indonesia;Asia;https://flagpedia.net/data/flags/w580/id.png
+Israel;Asia;https://flagpedia.net/data/flags/w580/il.png
+Isla de Man;Europa;https://flagpedia.net/data/flags/w580/im.png
+India;Asia;https://flagpedia.net/data/flags/w580/in.png
+Territorio Británico del Océano Índico;Asia;https://flagpedia.net/data/flags/w580/io.png
+Irak;Asia;https://flagpedia.net/data/flags/w580/iq.png
+Irán;Asia;https://flagpedia.net/data/flags/w580/ir.png
+Islandia;Europa;https://flagpedia.net/data/flags/w580/is.png
+Jersey;Europa;https://flagpedia.net/data/flags/w580/je.png
+Jamaica;América del Norte;https://flagpedia.net/data/flags/w580/jm.png
+Jordania;Asia;https://flagpedia.net/data/flags/w580/jo.png
+Kenia;África;https://flagpedia.net/data/flags/w580/ke.png
+Kirguistán;Asia;https://flagpedia.net/data/flags/w580/kg.png
+Camboya;Asia;https://flagpedia.net/data/flags/w580/kh.png
+Kiribati;Oceanía;https://flagpedia.net/data/flags/w580/ki.png
+Comoras;África;https://flagpedia.net/data/flags/w580/km.png
+San Cristóbal y Nieves;América del Norte;https://flagpedia.net/data/flags/w580/kn.png
+Corea del Norte;Asia;https://flagpedia.net/data/flags/w580/kp.png
+Kuwait;Asia;https://flagpedia.net/data/flags/w580/kw.png
+Islas Caimán;América del Norte;https://flagpedia.net/data/flags/w580/ky.png
+Kazajistán;Asia;https://flagpedia.net/data/flags/w580/kz.png
+Laos;Asia;https://flagpedia.net/data/flags/w580/la.png
+Líbano;Asia;https://flagpedia.net/data/flags/w580/lb.png
+Santa Lucía;América del Norte;https://flagpedia.net/data/flags/w580/lc.png
+Liechtenstein;Europa;https://flagpedia.net/data/flags/w580/li.png
+Sri Lanka;Asia;https://flagpedia.net/data/flags/w580/lk.png
+Liberia;África;https://flagpedia.net/data/flags/w580/lr.png
+Lesoto;África;https://flagpedia.net/data/flags/w580/ls.png
+Lituania;Europa;https://flagpedia.net/data/flags/w580/lt.png
+Luxemburgo;Europa;https://flagpedia.net/data/flags/w580/lu.png
+Letonia;Europa;https://flagpedia.net/data/flags/w580/lv.png
+Libia;África;https://flagpedia.net/data/flags/w580/ly.png
+Mónaco;Europa;https://flagpedia.net/data/flags/w580/mc.png
+Moldavia;Europa;https://flagpedia.net/data/flags/w580/md.png
+Montenegro;Europa;https://flagpedia.net/data/flags/w580/me.png
+San Martín (Francia);América del Norte;https://flagpedia.net/data/flags/w580/mf.png
+Madagascar;África;https://flagpedia.net/data/flags/w580/mg.png
+Islas Marshall;Oceanía;https://flagpedia.net/data/flags/w580/mh.png
+Macedonia del Norte;Europa;https://flagpedia.net/data/flags/w580/mk.png
+Malí;África;https://flagpedia.net/data/flags/w580/ml.png
+Myanmar;Asia;https://flagpedia.net/data/flags/w580/mm.png
+Mongolia;Asia;https://flagpedia.net/data/flags/w580/mn.png
+Macao;Asia;https://flagpedia.net/data/flags/w580/mo.png
+Islas Marianas del Norte;Oceanía;https://flagpedia.net/data/flags/w580/mp.png
+Martinica;América del Norte;https://flagpedia.net/data/flags/w580/mq.png
+Mauritania;África;https://flagpedia.net/data/flags/w580/mr.png
+Montserrat;América del Norte;https://flagpedia.net/data/flags/w580/ms.png
+Malta;Europa;https://flagpedia.net/data/flags/w580/mt.png
+Mauricio;África;https://flagpedia.net/data/flags/w580/mu.png
+Maldivas;Asia;https://flagpedia.net/data/flags/w580/mv.png
+Malawi;África;https://flagpedia.net/data/flags/w580/mw.png
+Malasia;Asia;https://flagpedia.net/data/flags/w580/my.png
+Mozambique;África;https://flagpedia.net/data/flags/w580/mz.png
+Namibia;África;https://flagpedia.net/data/flags/w580/na.png
+Nueva Caledonia;Oceanía;https://flagpedia.net/data/flags/w580/nc.png
+Níger;África;https://flagpedia.net/data/flags/w580/ne.png
+Isla Norfolk;Oceanía;https://flagpedia.net/data/flags/w580/nf.png
+Nicaragua;América del Norte;https://flagpedia.net/data/flags/w580/ni.png
+Nepal;Asia;https://flagpedia.net/data/flags/w580/np.png
+Nauru;Oceanía;https://flagpedia.net/data/flags/w580/nr.png
+Niue;Oceanía;https://flagpedia.net/data/flags/w580/nu.png
+Nueva Zelanda;Oceanía;https://flagpedia.net/data/flags/w580/nz.png
+Omán;Asia;https://flagpedia.net/data/flags/w580/om.png
+Panamá;América del Norte;https://flagpedia.net/data/flags/w580/pa.png
+Polinesia Francesa;Oceanía;https://flagpedia.net/data/flags/w580/pf.png
+Papúa Nueva Guinea;Oceanía;https://flagpedia.net/data/flags/w580/pg.png
+Filipinas;Asia;https://flagpedia.net/data/flags/w580/ph.png
+Pakistán;Asia;https://flagpedia.net/data/flags/w580/pk.png
+San Pedro y Miquelón;América del Norte;https://flagpedia.net/data/flags/w580/pm.png
+Islas Pitcairn;Oceanía;https://flagpedia.net/data/flags/w580/pn.png
+Puerto Rico;América del Norte;https://flagpedia.net/data/flags/w580/pr.png
+Palestina;Asia;https://flagpedia.net/data/flags/w580/ps.png
+Palaos;Oceanía;https://flagpedia.net/data/flags/w580/pw.png
+Catar;Asia;https://flagpedia.net/data/flags/w580/qa.png
+Reunión;África;https://flagpedia.net/data/flags/w580/re.png
+Rumania;Europa;https://flagpedia.net/data/flags/w580/ro.png
+Rusia;Europa;https://flagpedia.net/data/flags/w580/ru.png
+Ruanda;África;https://flagpedia.net/data/flags/w580/rw.png
+Islas Salomón;Oceanía;https://flagpedia.net/data/flags/w580/sb.png
+Seychelles;África;https://flagpedia.net/data/flags/w580/sc.png
+Sudán;África;https://flagpedia.net/data/flags/w580/sd.png
+Singapur;Asia;https://flagpedia.net/data/flags/w580/sg.png
+Santa Elena;África;https://flagpedia.net/data/flags/w580/sh.png
+Eslovenia;Europa;https://flagpedia.net/data/flags/w580/si.png
+Sierra Leona;África;https://flagpedia.net/data/flags/w580/sl.png
+San Marino;Europa;https://flagpedia.net/data/flags/w580/sm.png
+Somalia;África;https://flagpedia.net/data/flags/w580/so.png
+Surinam;América del Sur;https://flagpedia.net/data/flags/w580/sr.png
+Sudán del Sur;África;https://flagpedia.net/data/flags/w580/ss.png
+Santo Tomé y Príncipe;África;https://flagpedia.net/data/flags/w580/st.png
+El Salvador;América del Norte;https://flagpedia.net/data/flags/w580/sv.png
+San Martín (Países Bajos);América del Norte;https://flagpedia.net/data/flags/w580/sx.png
+Siria;Asia;https://flagpedia.net/data/flags/w580/sy.png
+Suazilandia;África;https://flagpedia.net/data/flags/w580/sz.png
+Islas Turcas y Caicos;América del Norte;https://flagpedia.net/data/flags/w580/tc.png
+Chad;África;https://flagpedia.net/data/flags/w580/td.png
+Tierras Australes y Antárticas Francesas;América del Sur;https://flagpedia.net/data/flags/w580/tf.png
+Togo;África;https://flagpedia.net/data/flags/w580/tg.png
+Tailandia;Asia;https://flagpedia.net/data/flags/w580/th.png
+Tayikistán;Asia;https://flagpedia.net/data/flags/w580/tj.png
+Tokelau;Oceanía;https://flagpedia.net/data/flags/w580/tk.png
+Timor Oriental;Asia;https://flagpedia.net/data/flags/w580/tl.png
+Turkmenistán;Asia;https://flagpedia.net/data/flags/w580/tm.png
+Tonga;Oceanía;https://flagpedia.net/data/flags/w580/to.png
+Trinidad y Tobago;América del Norte;https://flagpedia.net/data/flags/w580/tt.png
+Tuvalu;Oceanía;https://flagpedia.net/data/flags/w580/tv.png
+Taiwán;Asia;https://flagpedia.net/data/flags/w580/tw.png
+Tanzania;África;https://flagpedia.net/data/flags/w580/tz.png
+Uganda;África;https://flagpedia.net/data/flags/w580/ug.png
+Uzbekistán;Asia;https://flagpedia.net/data/flags/w580/uz.png
+Ciudad del Vaticano;Europa;https://flagpedia.net/data/flags/w580/va.png
+San Vicente y las Granadinas;América del Norte;https://flagpedia.net/data/flags/w580/vc.png
+Islas Vírgenes Británicas;América del Norte;https://flagpedia.net/data/flags/w580/vg.png
+Islas Vírgenes de los Estados Unidos;América del Norte;https://flagpedia.net/data/flags/w580/vi.png
+Vietnam;Asia;https://flagpedia.net/data/flags/w580/vn.png
+Vanuatu;Oceanía;https://flagpedia.net/data/flags/w580/vu.png
+Wallis y Futuna;Oceanía;https://flagpedia.net/data/flags/w580/wf.png
+Samoa;Oceanía;https://flagpedia.net/data/flags/w580/ws.png
+Kosovo;Europa;https://flagpedia.net/data/flags/w580/xk.png
+Yemen;Asia;https://flagpedia.net/data/flags/w580/ye.png
+Zambia;África;https://flagpedia.net/data/flags/w580/zm.png
+Zimbabue;África;https://flagpedia.net/data/flags/w580/zw.png

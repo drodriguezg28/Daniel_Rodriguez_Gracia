@@ -40,8 +40,8 @@ echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 sysctl -p
 
 # Guardar configuración perisitentemente
-# apt install iptables-persistent -y
-# sleep 5
-# netfilter-persistent save
-# echo "Configuración de redireccionamiento de puertos completada."
-# sleep 2
+DEBIAN_FRONTEND=noninteractive apt install iptables-persistent -y
+sleep 2
+netfilter-persistent save
+echo "Configuración de redireccionamiento de puertos completada."
+sleep 2

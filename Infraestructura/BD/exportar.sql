@@ -1,3 +1,4 @@
+USE elitescouting;
 
 SET FOREIGN_KEY_CHECKS = 0;
 SET SQL_MODE = '';
@@ -10,18 +11,18 @@ CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(Pais, Continente);
+(Nombre, Continente, Bandera);
   
 -- 2. EMAIL
   
 LOAD DATA LOCAL INFILE '/vagrant/BD/datos/email.csv'
-INTO TABLE email
-CHARACTER SET utf8mb4
-FIELDS TERMINATED BY ','
-LINES TERMINATED BY '\r\n'
-IGNORE 1 LINES
+INTO TABLE email 
+CHARACTER SET utf8mb4 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES 
 (ID_Email, Email);
-  
+
 -- 3. TELEFONO
   
 LOAD DATA LOCAL INFILE '/vagrant/BD/datos/telefono.csv'
@@ -40,7 +41,7 @@ CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(Nombre, Apellido1, Apellido2, Nacionalidad, Email, Telefono);
+(Nombre, Apellido1, Apellido2, Nacionalidad, Email, Telefono, Usuario);
   
 -- 5. CLUBES
   
@@ -50,7 +51,7 @@ CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(Nombre, Telefono, Email, url_logo);
+(Nombre, Pais, `Teléfono`, Email, Usuario, url_logo);
   
 -- 6. OJEADORES
   
@@ -60,7 +61,7 @@ CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(Nombre, Apellido1, Apellido2, Apodo, Email, Telefono);
+(Nombre, Apellido1, Apellido2, Apodo, Email, Telefono, Nacionalidad, Usuario);
 
 -- 7. JUGADORES
 --    Columna CSV "Dorsal" → columna tabla "Dorsal_actual"
@@ -72,7 +73,7 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (Nombre, Apellido1, Apellido2, Apodo, Fecha_Nacimiento, Nacionalidad, Posicion_Principal, Posicion_Secundaria,
- Altura, Peso, Dorsal_actual, Club_Actual, Valor_Mercado, Agente, Foto_Perfil);
+ Altura, Peso, Dorsal_actual, Club_Actual, Valor_Mercado, Agente, Foto_Perfil, Usuario);
   
 -- 8. TEMPORADA
 
@@ -251,6 +252,16 @@ CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(Jugador, Ojeador, Partido_Cubierto, Fecha_Informe, Valoraciones, Potencial, Recomendacion);
+(Jugador, Ojeador, Partido_Cubierto, Fecha_Informe, Valoraciones, Potencial);
+
+-- 22. USUARIOS (Tabla de Laravel)
+  
+LOAD DATA LOCAL INFILE '/vagrant/BD/datos/usuarios.csv'
+INTO TABLE users
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(name, email, password, tipo_usuario);
 
 SET FOREIGN_KEY_CHECKS = 1;
