@@ -26,7 +26,7 @@ class AutentificacionController extends Controller
             $totalclubes       = clubes::count();
             $totalcompeticiones= competicion::count();
             $totalusuarios     = User::count();
-            $ultimosinformes   = informes_scouting::with(['partido.Local','partido.Visitante','ojeador'])->latest()->take(5)->get();
+            $ultimosinformes   = informes_scouting::with(['partido.Local','partido.Visitante','ojeador'])->latest('Fecha_Informe')->take(5)->get();
             
             return view('contenido.principal_admin', compact(
                 'totalinformes','totaljugadores','totalojeadores',
