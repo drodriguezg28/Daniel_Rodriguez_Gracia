@@ -259,3 +259,6 @@ ID_Telefono int not null, -- FK
 ID_Agente int not null, -- FK
 PRIMARY KEY (ID_Telefono, ID_Agente)
 );
+
+use proyecto;
+select * from informes_scouting;

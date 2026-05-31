@@ -22,7 +22,8 @@ echo "Sistema de archivos NFS configurado en /var/www/web."
 
 # Configurar Apache para Laravel (DocumentRoot y mod_rewrite)
 sudo sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/web/public|g' /etc/apache2/sites-available/000-default.conf
-sudo sed -i 's|<Directory /var/www/>|<Directory /var/www/>\n\tAllowOverride All\n|g' /etc/apache2/apache2.conf
+# Solución al problema del enrutamiento de Laravel: reemplazar "AllowOverride None" por "All" correctamente
+sudo sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 sudo a2enmod rewrite
 
 # Habilitar módulo PHP y reiniciar Apache
