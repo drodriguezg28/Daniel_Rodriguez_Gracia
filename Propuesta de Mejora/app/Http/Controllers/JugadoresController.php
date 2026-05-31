@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\agentes;
 use App\Models\clubes;
 use App\Models\jugadores;
+use App\Models\paises;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -48,6 +49,7 @@ class JugadoresController extends Controller
         $jugador = $this->seleccion($id);
         $clubes = clubes::OrderBy('Nombre','asc')->with(['pais'])->get();
         $agentes = agentes::OrderBy('Apellido1','asc')->get();
+        $paises = paises::orderBy('Nombre', 'asc')->get();
 
         if ($jugador->Valor_Mercado != 0) {
             $jugador->Valor_Mercado = $jugador->Valor_Mercado / 1000000 ;
@@ -60,7 +62,7 @@ class JugadoresController extends Controller
         
         $usuarios = User::orderBy('name', 'asc')->get();
 
-        return view('contenido.jugadores.editar', compact('jugador','clubes','agentes','usuarios'));
+        return view('contenido.jugadores.editar', compact('jugador','clubes','agentes','usuarios','paises'));
     }
     
     public function creacion()
