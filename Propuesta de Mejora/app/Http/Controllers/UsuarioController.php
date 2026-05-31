@@ -45,7 +45,7 @@ class UsuarioController extends Controller
         $request->validate([
             'nombre'       => 'required|string|max:255',
             'email'        => 'required|email|unique:users,email,' . $id,
-            'tipo_usuario' => 'required|in:admin,ojeador,agente',
+            'tipo_usuario' => 'required|in:admin,ojeador,agente,jugadores',
             'password'     => 'nullable|string|min:4'
         ]);
 
@@ -69,7 +69,7 @@ class UsuarioController extends Controller
         $request->validate([
             'nombre'       => 'required|string|max:255',
             'email'        => 'required|email|unique:users,email',
-            'tipo_usuario' => 'required|in:admin,ojeador,agente',
+            'tipo_usuario' => 'required|in:admin,ojeador,agente,jugadores',
             'password'     => 'required|string|min:4'
         ]);
 
