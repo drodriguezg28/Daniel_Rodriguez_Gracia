@@ -1,4 +1,6 @@
 # Proyecto Intermodular
+<img width="1125" height="1003" alt="Image" src="https://github.com/user-attachments/assets/cc6567ce-b6a1-46fb-b5d1-bb6c4a29bece" />
+
 
 ## La estructura para este repositorio es la siguiente:
 
