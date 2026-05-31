@@ -46,7 +46,7 @@ class UsuarioController extends Controller
             'nombre'       => 'required|string|max:255',
             'email'        => 'required|email|unique:users,email,' . $id,
             'tipo_usuario' => 'required|in:admin,ojeador,agente',
-            'password'     => 'nullable|string|min:8'
+            'password'     => 'nullable|string|min:4'
         ]);
 
         $usuario = $this->seleccion($id);
@@ -70,7 +70,7 @@ class UsuarioController extends Controller
             'nombre'       => 'required|string|max:255',
             'email'        => 'required|email|unique:users,email',
             'tipo_usuario' => 'required|in:admin,ojeador,agente',
-            'password'     => 'required|string|min:8'
+            'password'     => 'required|string|min:4'
         ]);
 
         $usuario = new User();
